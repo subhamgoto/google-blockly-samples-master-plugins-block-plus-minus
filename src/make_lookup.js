@@ -12,7 +12,7 @@ import Blockly from 'blockly/core';
 import {createPlusField} from './field_plus';
 import {createMinusField} from './field_minus';
 
-const textJoinMutator = {
+const MakeLookup = {
   /**
    * Number of text inputs on this block.
    * @type {number}
@@ -154,13 +154,15 @@ const textJoinMutator = {
  * mutator is provided the block has two inputs.
  * @this {Blockly.Block}
  */
-const textJoinHelper = function() {
-  Blockly.Extensions.apply('text_quotes', this, false);
-  this.updateShape_(2);
-};
 
-if (Blockly.Extensions.isRegistered('make_lookup_mutator')) {
-  Blockly.Extensions.unregister('make_lookup_mutator');
-}
-Blockly.Extensions.registerMutator('make_lookup_mutator',
-    textJoinMutator, textJoinHelper);
+Blockly.Extensions.register('make_lookup', MakeLookup);
+// const textJoinHelper = function() {
+//   Blockly.Extensions.apply('text_quotes', this, false);
+//   this.updateShape_(2);
+// };
+
+// if (Blockly.Extensions.isRegistered('make_lookup_mutator')) {
+//   Blockly.Extensions.unregister('make_lookup_mutator');
+// }
+// Blockly.Extensions.registerMutator('make_lookup_mutator',
+//     textJoinMutator, textJoinHelper);
