@@ -5,7 +5,7 @@
  */
 
 /**
- * @fileoverview Changes the text_join block to use a +/- mutator UI.
+ * @fileoverview Changes the make_lookup block to use a +/- mutator UI.
  */
 
 import Blockly from 'blockly/core';
@@ -159,8 +159,8 @@ const textJoinHelper = function() {
   this.updateShape_(2);
 };
 
-if (Blockly.Extensions.isRegistered('text_join_mutator')) {
-  Blockly.Extensions.unregister('text_join_mutator');
+if (Blockly.Extensions.isRegistered('make_lookup_mutator')) {
+  Blockly.Extensions.unregister('make_lookup_mutator');
 }
-Blockly.Extensions.registerMutator('text_join_mutator',
+Blockly.Extensions.registerMutator('make_lookup_mutator',
     textJoinMutator, textJoinHelper);
