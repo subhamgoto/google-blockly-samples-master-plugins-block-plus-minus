@@ -1,5 +1,5 @@
 {
-  "name": "@blockly/block-plus-minus",
+  "name": "@blockly/block-plus-minus-updated",
   "version": "4.0.2",
   "description": "A group of blocks that replace the built-in mutator UI with a +/- based UI.",
   "scripts": {
