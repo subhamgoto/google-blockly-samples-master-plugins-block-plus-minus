@@ -110,7 +110,7 @@ const textJoinMutator = {
       }
       this.topInput_ = this.appendValueInput('ADD' + this.itemCount_)
           .appendField(createPlusField(), 'PLUS')
-          .appendField("Make lookup");
+          .appendField('Make lookup');
     } else {
       this.appendValueInput('ADD' + this.itemCount_);
     }
